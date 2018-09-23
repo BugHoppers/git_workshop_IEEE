@@ -1,0 +1,39 @@
+#first{
+    background-image: url('../assets/background-first.png');
+    position: relative;
+    z-index: -1;
+    height: 94vh;
+}
+#second{
+    background: white;
+    height: 100vh;
+}
+
+#ieee{
+    position: absolute;
+    height: auto;
+    width: 25%;
+    left: 10vw;
+    top: 5vh;
+}
+
+#tu{
+    position: absolute;
+    height: auto;
+    width: 9%;
+    right: 13vw;
+    top: 5vh;
+}
+
+#presents{
+    position: absolute; 
+    top: 14vh;
+    left: 44vw;
+}
+#github-logo{
+    position: absolute;
+    width: 25%;
+    height: auto; 
+    top: 24vh;
+    left: 37vw;
+}
