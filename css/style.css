@@ -1,5 +1,5 @@
 #first{
-    background-image: url('../assets/background-first.png');
+    /* background-image: url('../assets/background-first.png'); */
     position: relative;
     z-index: -1;
     height: 94vh;
@@ -12,7 +12,7 @@
 #ieee{
     position: absolute;
     height: auto;
-    width: 25%;
+    width: 25%; 
     left: 10vw;
     top: 5vh;
 }
