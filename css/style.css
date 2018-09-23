@@ -1,12 +1,14 @@
 #first{
     /* background-image: url('../assets/background-first.png'); */
+    background: linear-gradient(to bottom right, #ee0979, #ff6a00);
     position: relative;
-    z-index: -1;
-    height: 94vh;
+    height: 100vh;
 }
 #second{
-    background: white;
-    height: 100vh;
+    background: rgb(235, 229, 229);
+    height: auto;
+    padding-left: 20%;
+    padding-bottom: 40px;
 }
 
 #ieee{
@@ -24,16 +26,100 @@
     right: 13vw;
     top: 5vh;
 }
-
-#presents{
-    position: absolute; 
-    top: 14vh;
-    left: 44vw;
-}
 #github-logo{
     position: absolute;
     width: 25%;
     height: auto; 
     top: 24vh;
     left: 37vw;
+}
+#gplus{
+    position: absolute;
+    width: 25%;
+    height: auto; 
+    top: 65vh;
+    left: 41vw;
+    font-size: 60px;
+    font-weight: 700; 
+}
+
+#gwksp{
+    position: absolute;
+    width: 25%;
+    height: auto; 
+    top: 73vh;
+    left: 45vw;
+    font-size: 40px;
+    font-weight: 500; 
+}
+
+#dandt{
+    position: absolute;
+    width: 25%;
+    height: auto; 
+    top: 79vh;
+    left: 43vw;
+    font-size: 40px;
+    font-weight: 400; 
+}
+.part{
+    margin:0;
+    padding: 0;
+    padding-left: 30%;
+    padding-bottom: 30px;
+}
+
+.maincontainer{
+    position: relative;
+    width: 320px;
+    height: 410px;
+}
+
+.thecard{
+    padding: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.thecard:hover{
+    transform: rotateY(180deg);
+}
+
+.thefront{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: white;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+
+.theback{
+    margin: 0;
+    padding: 30px;
+    position: absolute;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: rgb(252, 224, 70);
+    color: #333;
+    transform: rotateY(180deg);
+}
+
+.card-image{
+    height: 250px;
+    width: 250px;
+    margin: 35px;
+    border-radius: 40%;
+}
+.name{
+    margin: 10px;
+    font-weight: 600;
 }

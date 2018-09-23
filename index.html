@@ -10,34 +10,76 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
 </head>
 
 <body>
     <div ng-app="ieee_git" ng-controller="myController">
-        <div class="navbar-fixed">
-            <nav>
-                <div class="nav-wrapper deep-orange">
-                    <a href="#" class="brand-logo center">Welcome</a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-
         <section>
             <div id="first">
                 <img id="ieee" src="./assets/ieee.png">
                 <img id="tu" src="./assets/tu-logo.png">
-                <h3 id="presents">PRESENTS</h3>
                 <img id="github-logo" src="./assets/gh-logo.png">
+                <h2 id="gplus">Git+ GitHub</h2>
+                <h2 id="gwksp">Workshop</h2>
+                <h2 id="dandt">24th Sept. 2018</h2>
             </div>
         </section>
 
         <section>
             <div id="second">
-
+                <h1 class="part">MENTORS</h1>
+                <div class="row">
+                    <div data-ng-repeat="mentor in mentors" class="col s3">
+                        <div class="maincontainer">
+                            <div class="thecard">
+                                <div class="thefront">
+                                    <img class="card-image" src={{mentor.photo}}>
+                                    <hr>
+                                    <h4 class="name">{{mentor.name}}</h4>
+                                </div>
+                                <div class="theback">
+                                    <p>{{mentor.message}}</p>
+                                    <div class="row" style="margin-left: 25px; position: absolute;bottom: 10px;">
+                                        <div class="col s3">
+                                            <a href=""> <i class="fab fa-github fa-3x" style="color:black;"></i></a>
+                                        </div>
+                                        <div class="col s3">
+                                            <a href=""> <i class="fab fa-facebook fa-3x" style="color:black;"></i></a>
+                                        </div>
+                                        <div class="col s3">
+                                            <a href=""> <i class="fas fa-envelope-square fa-3x" style="color:black;"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="part">PARTICIPANTS</h1>
+                <div class="row">
+                    <div data-ng-repeat="participant in participants" class="col s3">
+                        <div class="maincontainer">
+                            <div class="thecard">
+                                <div class="thefront">
+                                    <img class="card-image" src={{participant.photo}}>
+                                    <hr>
+                                    <h4 class="name">{{participant.name}}</h4>
+                                </div>
+                                <div class="theback">
+                                    <p>{{participant.message}}</p>
+                                    <div class="row">
+                                        <div class="col s3"><a href=""><i class="fab fa-github fa-3x" style="color:black;"></i></a></div>
+                                        <div class="col s3"><a href=""> <i class="fab fa-facebook fa-3x" style="color:black;"></i></a></div>
+                                        <div class="col s3"><a href=""> <i class="fas fa-envelope-square fa-3x" style="color:black;"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
@@ -46,6 +88,31 @@
     var app = angular.module('ieee_git', []);
     app.controller('myController', function ($scope) {
         $scope.name = "Nitya";
+        $scope.mentors = [
+            {
+                name: "Nityananda Gohain",
+                photo: "https://avatars0.githubusercontent.com/u/26831659?s=460&v=4",
+                message: "Hi, I love contributing to open source projects.",
+            },
+            {
+                name: "Adirtha Borgohain",
+                photo: "https://avatars1.githubusercontent.com/u/32612696?s=400&v=4",
+                message: "Hi! I am ready to merge! are you?",
+            },
+            {
+                name: "Sourish Sarmah",
+                photo: "https://avatars2.githubusercontent.com/u/35569202?s=400&v=4",
+                message: "Hi! I am ready to commit! are you ?"
+            }
+        ];
+
+        $scope.participants = [
+            {
+                name: "",
+                photo: "",
+                message: "",
+            },
+        ];
     });
 </script>
 
