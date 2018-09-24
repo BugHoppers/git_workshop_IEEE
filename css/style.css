@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 #first{
     /* background-image: url('../assets/background-first.png'); */
     background: linear-gradient(to bottom right, #ee0979, #ff6a00);
@@ -5,7 +7,7 @@
     height: 100vh;
 }
 #second{
-    background: rgb(235, 229, 229);
+    background: #F7F7F7;
     height: auto;
     padding-left: 20%;
     padding-bottom: 40px;
@@ -65,8 +67,11 @@
 .part{
     margin:0;
     padding: 0;
+    padding-top: 5%;
     padding-left: 30%;
     padding-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: underline;
 }
 
 .maincontainer{
@@ -78,10 +83,11 @@
 .thecard{
     padding: 0;
     position: absolute;
-    height: 100%;
+    height: 105%;
     width: 100%;
     transform-style: preserve-3d;
     transition: all 0.5s ease;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .thecard:hover{
@@ -108,8 +114,8 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    background: rgb(252, 224, 70);
-    color: #333;
+    background: linear-gradient(to bottom right, #0d3472, #0b4eba);
+    color: white;
     transform: rotateY(180deg);
 }
 
@@ -117,9 +123,14 @@
     height: 250px;
     width: 250px;
     margin: 35px;
-    border-radius: 40%;
+    border-radius: 50%;
 }
 .name{
     margin: 10px;
-    font-weight: 600;
+    font-weight: 500;
+    text-align: center;
+}
+
+.icons{
+    margin: 5%;
 }
