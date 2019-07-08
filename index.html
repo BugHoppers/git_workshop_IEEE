@@ -6,85 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>IEEE Git Workshop</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="css/minified-styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Comfortaa:600&display=swap" rel="stylesheet"> 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-        crossorigin="anonymous">
 </head>
 
 <body>
-    <div ng-app="ieee_git" ng-controller="myController">
-        <section>
-            <div id="first">
-                <img id="ieee" src="./assets/ieee.png">
-                <img id="tu" src="./assets/tu-logo.png">
-                <img id="github-logo" src="./assets/gh-logo.png">
-                <h2 id="gplus">Git+ GitHub</h2>
-                <h2 id="gwksp">Workshop</h2>
-                <h2 id="dandt">24th Sept. 2018</h2>
-            </div>
-        </section>
+    <div id="first">
+                <img id="left_banner" src="./assets/ieee.png">
+                <div id="right_banner"><img src="./assets/tu-logo.png"></div>
+                <div class="logo_center">
+                <img id="logo_center" src="./assets/gh-logo.png">
+                </div>
 
-        <section>
-            <div id="second">
-                <h1 class="part">MENTORS</h1>
-                <div class="row">
-                    <div data-ng-repeat="mentor in mentors" class="col s3">
-                        <div class="maincontainer">
-                            <div class="thecard">
-                                <div class="thefront">
-                                    <img class="card-image" src={{mentor.photo}}>
-                                    <hr>
-                                    <h4 class="name">{{mentor.name}}</h4>
-                                </div>
-                                <div class="theback">
-                                    <p>{{mentor.message}}</p>
-                                    <div class="row" style="margin-left: 25px; position: absolute;bottom: 10px;">
-                                        <div class="col s3 icons">
-                                            <a href=""> <i class="fab fa-github fa-3x" style="color:white;"></i></a>
-                                        </div>
-                                        <div class="col s3 icons">
-                                            <a href=""> <i class="fab fa-facebook fa-3x" style="color:white;"></i></a>
-                                        </div>
-                                        <div class="col s3 icons">
-                                            <a href=""> <i class="fas fa-envelope-square fa-3x" style="color:white;"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="heading">
+                <h1>Git & Github Workshop</h1>
+                <h1>24th Sept. 2018</h1>
                 </div>
-                <h1 class="part">PARTICIPANTS</h1>
-                <div class="row">
-                    <div data-ng-repeat="participant in participants" class="col s3">
-                        <div class="maincontainer">
-                            <div class="thecard">
-                                <div class="thefront">
-                                    <img class="card-image" src={{participant.photo}}>
-                                    <hr>
-                                    <h4 class="name">{{participant.name}}</h4>
-                                </div>
-                                <div class="theback">
-                                    <p>{{participant.message}}</p>
-                                    <div class="row">
-                                        <div class="col s3"><a href=""><i class="fab fa-github fa-3x" style="color:black;"></i></a></div>
-                                        <div class="col s3"><a href=""> <i class="fab fa-facebook fa-3x" style="color:black;"></i></a></div>
-                                        <div class="col s3"><a href=""> <i class="fas fa-envelope-square fa-3x" style="color:black;"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </div>
-</body>
-<script>
+    <div id="second">
+        <div ng-app="ieee_git" ng-controller="myController">
+        <h1>Mentors: </h1>
+        <div class="container">
+        <div data-ng-repeat="mentor in mentors" class="card">
+            <img class = "card_image" src="{{mentor.photo}}" alt="github image of {{mentor.name}}" class="card_image">
+            
+            <h2 class="message">"{{mentor.message}}"</h2>
+            <h2>- {{mentor.name}}</h2>
+        </div>
+        </div>
+        <h1>Participants: </h1>
+        <div class="container">
+            <div data-ng-repeat="participant in participants" class="card">
+                <img class = "card_image" src="{{participant.photo}}" alt="Hi,I'm {{participant.name}}" onerror="this.src='assets/fallback.png'">
+                <h2 class = "message">-"{{participant.message}}"</h2>
+                <h2>- {{participant.name}}</h2>
+            </div>
+        </div>
+    </div>
+    </div>
+    <h5 style="display: flex;margin: 0;justify-content: flex-end;"><a href="https://github.com/Ri2parna"style="text-decoration: none;color: #217595;font-weight: lighter;font-family: 'Comfortaa', cursive;">Created by: Rituparna_Das</a></h5>
+    <script>
     var app = angular.module('ieee_git', []);
     app.controller('myController', function ($scope) {
         $scope.name = "Nitya";
@@ -114,14 +76,14 @@
                 github: "https://github.com/Amar-new",
 
             },
-            {
-                name: "Shinchan",
-                photo: "https://pm1.narvii.com/6864/482dc3ec7b767e8e6ec20c4262182bf10411586cr1-752-1061v2_hq.jpg",
-                message: "Shinchan loves coding",
-                github: "",
-                facebook: "",
-                email: "",
-            },
+            // {
+            //     name: "Shinchan",
+            //     photo: "https://pm1.narvii.com/6864/482dc3ec7b767e8e6ec20c4262182bf10411586cr1-752-1061v2_hq.jpg",
+            //     message: "Shinchan loves coding",
+            //     github: "",
+            //     facebook: "",
+            //     email: "",
+            // },
             {
                 name: "Bishal Deb",
                 photo: "https://avatars3.githubusercontent.com/u/36695144?s=460&v=4",
@@ -153,9 +115,21 @@
                 github: "",
                 facebook: "",
                 email: "subhasishgoswami00@gmail.com",
+            },
+
+            {
+                name: "Rituparna",
+                photo: "https://avatars2.githubusercontent.com/u/34682073?s=460&v=4",
+                message: "Eats semicolons for breakfast!",
+                github: "https://github.com/Ri2parna",
+                facebook: "",
+                email: "ri2parna@outlook.com",
             }
+
+
+
         ];
     });
 </script>
-
+</body>
 </html>
